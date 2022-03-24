@@ -11,6 +11,8 @@ import { CadastroContasComponent } from './cadastro-contas/cadastro-contas.compo
 import { ExtratoComponent } from './extrato/extrato.component';
 import { CadastroGastosComponent } from './cadastro-gastos/cadastro-gastos.component';
 import { ConfiguracoesComponent } from './configuracoes/configuracoes.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { ConfiguracoesComponent } from './configuracoes/configuracoes.component'
     CadastroContasComponent,
     ExtratoComponent,
     CadastroGastosComponent,
-    ConfiguracoesComponent
+    ConfiguracoesComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
