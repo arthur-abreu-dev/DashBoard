@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  finance-dashboard:
+    container_name: finance-dashboard
+    build: 
+      dockerfile: ./Dockerfile
+    ports:  
+      - '8000:80'
+
+  mysql:     
+    image: mysql:5.7
+    volumes: 
+      - financeDashBoardDB:/var/lib/mysql
+    environment:
+       MYSQL_ROOT_PASSWORD: root
+       MYSQL_DATABASE: financedashboard
+
+
+volumes:
+  financeDashBoardDB:
